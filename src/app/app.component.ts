@@ -34,4 +34,9 @@ export class AppComponent {
       rating: 5
     });
   }
+  remove() {
+    this.af.database.object('/restaurant').remove()
+      .then(x => console.log('success'))
+      .catch(error => console.log(error))
+  }
 }
