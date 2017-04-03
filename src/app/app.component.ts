@@ -28,4 +28,10 @@ export class AppComponent {
       }
     })
   }
+  update() {
+    this.af.database.object('/restaurant').update({
+      name: 'New Name',
+      rating: 5
+    });
+  }
 }
